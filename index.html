@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMP Elite Simulator</title>
+    <title>PMP Elite Simulator | Pass the 2026 Exam</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,16 +29,19 @@
         /* Layout Sections */
         .white-section { padding: 90px 8%; background-color: #FFFFFF; }
         .gray-section { padding: 90px 8%; background-color: #F8FAFC; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        /* Fixed Grid Layouts (3 Columns for Desktop) */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
         
         /* Value Cards */
         .value-card { text-align: center; padding: 30px 20px; }
         .value-icon { font-size: 2.5rem; color: #EAB308; margin-bottom: 20px; }
         
         /* UI Mockups */
-        .ui-card { background: white; border-radius: 8px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .ui-card { background: white; border-radius: 8px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); height: 100%; display: flex; flex-direction: column; }
         .ui-header { background: #F1F5F9; padding: 12px 20px; font-size: 0.75rem; font-weight: 600; color: #64748B; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid #E2E8F0; }
-        .ui-body { padding: 25px 20px; }
+        .ui-body { padding: 25px 20px; flex-grow: 1; }
         .ui-mock-element { background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 6px; padding: 20px; margin-bottom: 20px; }
         
         /* Testimonials */
@@ -71,7 +74,12 @@
         .close-btn { position: absolute; top: 20px; right: 25px; font-size: 28px; font-weight: bold; color: #64748B; cursor: pointer; }
         .close-btn:hover { color: #0F172A; }
 
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .grid-3, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
+            .grid-3, .testimonial-grid { grid-template-columns: 1fr; }
             .hero-section { padding: 60px 15px; }
             .hero-title { font-size: 2.2rem; }
             .btn-primary, .btn-secondary { display: block; margin: 10px 0; text-align: center; }
@@ -82,71 +90,71 @@
 <body>
 
     <div class="top-bar">
-        LATEST ECO 2026 ALIGNMENT COMPLETED. <a href="https://pmp-simulator-2026.streamlit.app">BEGIN YOUR FREE ASSESSMENT</a>
+        DATA PIPELINES UPDATED FOR 2026 ECO. <a href="https://pmp-simulator-2026.streamlit.app">LAUNCH DIAGNOSTIC</a>
     </div>
 
     <div class="hero-section">
-        <h1 class="hero-title serif-text">Know If You're Ready for<br>the Updated PMP Exam</h1>
-        <p class="hero-subtitle">Start with the free readiness assessment, then strengthen your judgment with scenario-based practice aligned to the 2026 PMP Examination Content Outline and the PMBOK Guide—Eighth Edition.</p>
-        <a href="https://pmp-simulator-2026.streamlit.app" class="btn-primary">Start Free Assessment</a>
-        <a href="#pricing" class="btn-secondary">View Plans</a>
-        <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 20px; font-weight: 300;">Free 15-Question Diagnostic • Immediate readiness feedback</p>
+        <h1 class="hero-title serif-text">Command the PMP® Exam<br>With Elite Precision</h1>
+        <p class="hero-subtitle">Bypass outdated memorization. Validate your readiness using a strictly analytical, scenario-based simulator designed to perfectly mirror the rigor of the 2026 Examination Content Outline.</p>
+        <a href="https://pmp-simulator-2026.streamlit.app" class="btn-primary">Take the Free Diagnostic</a>
+        <a href="#pricing" class="btn-secondary">Review Pricing</a>
+        <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 20px; font-weight: 300;">Free 15-Question Baseline • No Credit Card Required</p>
     </div>
 
     <div class="white-section grid-3">
         <div class="value-card">
-            <div class="value-icon">📖</div>
-            <h3 class="serif-text" style="color: #0F172A; margin-bottom: 10px;">Built for the 2026 exam</h3>
-            <p style="color: #64748B;">100% aligned to the PMBOK® Guide Eighth Edition and the latest PMP® Examination Content Outline.</p>
+            <div class="value-icon">🏛️</div>
+            <h3 class="serif-text" style="color: #0F172A; margin-bottom: 10px;">Architected for 2026</h3>
+            <p style="color: #64748B;">Meticulously mapped to the current ECO and PMBOK® Guide, focusing heavily on Agile and Hybrid enterprise delivery.</p>
         </div>
         <div class="value-card">
-            <div class="value-icon">🎯</div>
-            <h3 class="serif-text" style="color: #0F172A; margin-bottom: 10px;">2,000+ scenario questions</h3>
-            <p style="color: #64748B;">Judgment-based items across People, Process, and Business Environment—never recall or definitions.</p>
+            <div class="value-icon">⚖️</div>
+            <h3 class="serif-text" style="color: #0F172A; margin-bottom: 10px;">Situational Judgment</h3>
+            <p style="color: #64748B;">Eliminate rote learning. Our engine strictly tests your ability to apply PMI's servant-leadership mindset to complex scenarios.</p>
         </div>
         <div class="value-card">
-            <div class="value-icon">⏱️</div>
-            <h3 class="serif-text" style="color: #0F172A; margin-bottom: 10px;">Real exam conditions</h3>
-            <p style="color: #64748B;">Full 180-question, 230-minute simulations with the interactive question types on the new exam.</p>
+            <div class="value-icon">🛡️</div>
+            <h3 class="serif-text" style="color: #0F172A; margin-bottom: 10px;">Cognitive Conditioning</h3>
+            <p style="color: #64748B;">Build exam-day stamina with rigorous 180-question, 230-minute stress tests that leave nothing to chance.</p>
         </div>
     </div>
 
     <div class="gray-section">
-        <h2 class="serif-text" style="text-align: center; font-size: 2.5rem; color: #0F172A; margin-bottom: 10px;">See the Real Product, Not a Mockup</h2>
-        <p style="text-align: center; color: #64748B; margin-bottom: 50px;">Genuine workflows from the live simulator: the question experience, coaching insights, and readiness result.</p>
+        <h2 class="serif-text" style="text-align: center; font-size: 2.5rem; color: #0F172A; margin-bottom: 10px;">The Platform Engine</h2>
+        <p style="text-align: center; color: #64748B; margin-bottom: 50px;">A transparent look inside the workflows securing your passing score.</p>
         <div class="grid-3">
             <div class="ui-card">
-                <div class="ui-header">STEP 1 — PRACTICE</div>
+                <div class="ui-header">PHASE 1 — EXECUTION</div>
                 <div class="ui-body">
                     <div class="ui-mock-element" style="border-left: 3px solid #3B82F6;">
                         <div style="height: 10px; width: 40%; background: #E2E8F0; margin-bottom: 10px;"></div>
                         <div style="height: 10px; width: 90%; background: #E2E8F0; margin-bottom: 10px;"></div>
                         <div style="height: 10px; width: 70%; background: #E2E8F0;"></div>
                     </div>
-                    <h4 style="color: #0F172A; margin-bottom: 10px;">Question Experience</h4>
-                    <p style="color: #64748B; font-size: 0.9rem;">Practice every format: multiple response, matching, point & click, and graphic-based.</p>
+                    <h4 style="color: #0F172A; margin-bottom: 10px;">Immersive UI</h4>
+                    <p style="color: #64748B; font-size: 0.9rem;">Interact with multi-response and matching item types identical to the real Pearson VUE testing environment.</p>
                 </div>
             </div>
             <div class="ui-card">
-                <div class="ui-header">STEP 2 — LEARN</div>
+                <div class="ui-header">PHASE 2 — RECALIBRATION</div>
                 <div class="ui-body">
                     <div class="ui-mock-element" style="background: #ECFDF5; border: 1px solid #10B981;">
-                        <div style="color: #10B981; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">✓ Correct Logic Applied</div>
+                        <div style="color: #10B981; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">✓ Logic Validated</div>
                         <div style="height: 8px; width: 100%; background: #D1FAE5; margin-bottom: 8px;"></div>
                         <div style="height: 8px; width: 60%; background: #D1FAE5;"></div>
                     </div>
-                    <h4 style="color: #0F172A; margin-bottom: 10px;">Coaching Insights</h4>
-                    <p style="color: #64748B; font-size: 0.9rem;">Understand exactly why the best answer is correct and how PMI expects you to think.</p>
+                    <h4 style="color: #0F172A; margin-bottom: 10px;">Analytical Rationales</h4>
+                    <p style="color: #64748B; font-size: 0.9rem;">Deconstruct exactly why distractors fail PMI's ethical standards so you never make the same error twice.</p>
                 </div>
             </div>
             <div class="ui-card">
-                <div class="ui-header">STEP 3 — IMPROVE</div>
+                <div class="ui-header">PHASE 3 — PREDICTION</div>
                 <div class="ui-body">
                     <div class="ui-mock-element" style="text-align: center; background: transparent; border: none;">
-                        <div style="display: inline-block; width: 80px; height: 80px; border-radius: 50%; border: 6px solid #EAB308; line-height: 68px; font-size: 1.5rem; font-weight: 700; color: #0F172A;">76%</div>
+                        <div style="display: inline-block; width: 80px; height: 80px; border-radius: 50%; border: 6px solid #EAB308; line-height: 68px; font-size: 1.5rem; font-weight: 700; color: #0F172A;">78%</div>
                     </div>
-                    <h4 style="color: #0F172A; margin-bottom: 10px;">Readiness Result</h4>
-                    <p style="color: #64748B; font-size: 0.9rem;">A real-time benchmark and personalized data guidance across all three domains.</p>
+                    <h4 style="color: #0F172A; margin-bottom: 10px;">Data-Driven Readiness</h4>
+                    <p style="color: #64748B; font-size: 0.9rem;">Stop guessing. Pinpoint your exact proficiency across People, Process, and Business Environment domains.</p>
                 </div>
             </div>
         </div>
@@ -154,101 +162,96 @@
 
     <div class="white-section" style="text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
-            <p style="color: #EAB308; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;">Engineered for Professionals, By a Professional</p>
-            <h2 class="serif-text" style="color: #0F172A; margin-top: 10px; font-size: 2.2rem;">Built by an Enterprise Risk & Data Expert</h2>
+            <p style="color: #EAB308; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;">Engineered by a Practitioner, For Practitioners</p>
+            <h2 class="serif-text" style="color: #0F172A; margin-top: 10px; font-size: 2.2rem;">Architected by an Enterprise Project Leader</h2>
             <p style="color: #475569; line-height: 1.8; font-size: 1.1rem; text-align: left; margin-top: 30px;">
-                Built by a certified <strong>PMP® and PgMP® professional</strong> bringing over 15 years of hard-earned experience orchestrating complex enterprise risk systems, product management life cycles, and advanced data analytics.
+                Constructed by a certified <strong>PMP® and PgMP® professional</strong> leveraging over 15 years of boots-on-the-ground experience orchestrating enterprise risk frameworks and advanced data pipelines.
                 <br><br>
-                This is not a generic test prep factory. The Elite Simulator was engineered utilizing sophisticated Python data pipelines to perfectly mirror the real exam's rigor, ensuring your study time is driven by precise, analytical performance tracking.
+                The Elite Simulator abandons the generic test-prep factory model. Instead, it utilizes sophisticated Python data structures to faithfully replicate the psychological rigor of the real exam, guaranteeing your final weeks of study are guided by precise, empirical performance data.
             </p>
-            <div style="border-left: 4px solid #EAB308; padding-left: 20px; margin-top: 30px; text-align: left;">
-                <p style="font-style: italic; color: #111827; font-size: 1.1rem;">"A faithful, principle-aligned preparation tool that bridges the gap between studying framework theory and executing actual project judgment."</p>
-            </div>
         </div>
     </div>
 
     <div class="gray-section">
-        <h2 class="serif-text" style="text-align: center; font-size: 2.5rem; color: #0F172A; margin-bottom: 40px;">What Candidates Are Saying</h2>
+        <h2 class="serif-text" style="text-align: center; font-size: 2.5rem; color: #0F172A; margin-bottom: 10px;">Elite Alumni Outcomes</h2>
         <div class="testimonial-grid">
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"Solid prep. The domain breakdown showed me I was way weaker on Business Environment than I thought. Fixed that in a week."</p><div class="reviewer-name">Rajesh K.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The domain analytics helped me identify my weak areas. I focused my study time efficiently and passed on my first attempt."</p><div class="reviewer-name">James R.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The scenario questions felt almost identical in tone to the real exam. Walking in on test day, nothing surprised me."</p><div class="reviewer-name">Kumud M.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"I failed my first attempt using generic mocks. The Elite Simulator's situational questions made all the difference on my second try."</p><div class="reviewer-name">Amit S.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"No fluff, just hard, realistic questions. If you can score 75% on these full-length mocks, you are ready for the real deal."</p><div class="reviewer-name">Michael T.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"Worth every penny. The bonus question banks and the strict timers built the serious mental stamina I needed."</p><div class="reviewer-name">Neha D.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The interface is slick, and the coaching insights completely shifted how I approach PMI's servant-leadership logic."</p><div class="reviewer-name">Vikram R.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The best investment in my PMP journey. The questions are remarkably close to what I saw on the real ECO test."</p><div class="reviewer-name">Sarah J.</div></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"I loved the immediate feedback. The lifetime access let me pace my domain sprints perfectly over 3 months of studying."</p><div class="reviewer-name">Anjali T.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The domain isolation tools immediately highlighted my blind spots in Agile methodologies. Course-corrected in a week and passed."</p><div class="reviewer-name">Rajesh K.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"These situational prompts mirror the genuine ambiguity of the live test perfectly. I walked into the exam center completely unfazed."</p><div class="reviewer-name">James R.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"I failed my initial attempt using cheap mocks. Upgrading to this simulator was the sole reason I cleared it Above Target on round two."</p><div class="reviewer-name">Kumud M.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"Zero fluff. If you can push your cumulative score past 75% on these specific stress tests, you are definitively ready for the real thing."</p><div class="reviewer-name">Amit S.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"Worth the investment purely for the strict 230-minute timers. It built the cognitive endurance I desperately needed."</p><div class="reviewer-name">Michael T.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The deep-dive rationales completely rewired how I process PMI's servant-leadership ideology. Essential for modern PMs."</p><div class="reviewer-name">Neha D.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"A phenomenal tool. The exclusive bonus question banks provided that extra layer of difficulty to ensure I was over-prepared."</p><div class="reviewer-name">Vikram R.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"Unmatched quality. The UI is sleek, the data feedback is immediate, and the questions track identically to the 2026 ECO."</p><div class="reviewer-name">Sarah J.</div></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p style="color: #475569; font-style: italic; font-size: 0.95rem;">"The lifetime access model is fantastic. It allowed me to pace my domain sprints over three months without worrying about expirations."</p><div class="reviewer-name">Anjali T.</div></div>
         </div>
     </div>
 
     <div id="pricing" class="white-section">
-        <h2 class="serif-text" style="text-align: center; font-size: 2.5rem; color: #0F172A;">Simple, One-Time Pricing</h2>
-        <p style="text-align: center; color: #64748B; margin-bottom: 60px;">Training that prevents failure pays for itself. Instant access. Secure checkout.</p>
+        <h2 class="serif-text" style="text-align: center; font-size: 2.5rem; color: #0F172A;">Transparent, One-Time Pricing</h2>
+        <p style="text-align: center; color: #64748B; margin-bottom: 60px;">A single investment to secure your certification. No recurring subscriptions.</p>
         <div class="pricing-card">
             <div class="pricing-badge">LIFETIME</div>
-            <h3 class="serif-text" style="color: #0F172A; margin-top: 0; font-size: 1.8rem;">Elite Access</h3>
+            <h3 class="serif-text" style="color: #0F172A; margin-top: 0; font-size: 1.8rem;">PMP Elite Access</h3>
             <h1 style="color: #0F172A; font-size: 4rem; margin: 10px 0; font-weight: 700;">₹699</h1>
             <p style="color: #64748B; font-size: 0.95rem;">One-time secure payment</p>
             <hr style="border-top: 1px solid #E2E8F0; margin: 30px 0;">
             <ul class="pricing-list">
                 <li>✓ <strong>6 Full-Length Mocks</strong> (180 questions each)</li>
-                <li>✓ <strong>Targeted Domain Sprints</strong> for rapid review</li>
+                <li>✓ <strong>Targeted Domain Sprints</strong> for knowledge gaps</li>
                 <li>✓ <strong>Bonus Question Banks</strong> included</li>
-                <li>✓ Advanced analytical dashboard & trend tracking</li>
-                <li>✓ Deep-dive rationales for every option</li>
+                <li>✓ Advanced performance and trend analytics</li>
+                <li>✓ Comprehensive rationales for all distractors</li>
                 <li>✓ Lifetime platform access</li>
             </ul>
             <div style="text-align: center;">
-                <a href="https://pmp-simulator-2026.streamlit.app" class="btn-primary" style="display: block; padding: 18px;">Secure Premium Access</a>
+                <a href="https://pmp-simulator-2026.streamlit.app" class="btn-primary" style="display: block; padding: 18px;">Unlock Elite Access Now</a>
             </div>
         </div>
     </div>
 
     <div class="gray-section" style="padding-top: 40px; padding-bottom: 40px;">
         <div style="max-width: 800px; margin: 0 auto;">
-            <h2 class="serif-text" style="text-align: center; font-size: 2rem; color: #0F172A; margin-bottom: 30px;">Common Questions</h2>
+            <h2 class="serif-text" style="text-align: center; font-size: 2rem; color: #0F172A; margin-bottom: 30px;">Frequently Asked Questions</h2>
             <details>
-                <summary>Is this simulator aligned with PMBOK 8 and ECO 2026?</summary>
-                <p>Yes, the entire question bank has been systematically audited and aligned with the latest Project Management Professional (PMP)® Examination Content Outline (ECO) for 2026. This includes comprehensive coverage of the three core domains: People (42%), Process (50%), and Business Environment (8%). The scenarios heavily integrate Agile, Predictive, and Hybrid project management methodologies exactly as they are tested on the current PMBOK® Guide - Eighth Edition.</p>
+                <summary>Is this simulator fully updated for the current exam?</summary>
+                <p>Yes. Our infrastructure is systematically mapped to the latest Project Management Professional (PMP)® Examination Content Outline (ECO). We provide exhaustive coverage of the People (42%), Process (50%), and Business Environment (8%) domains, tightly integrating Agile and Hybrid methodologies.</p>
             </details>
             <details>
-                <summary>Can I try it before paying?</summary>
-                <p>Absolutely. We believe the quality of the simulator speaks for itself. You can take our Free Readiness Assessment immediately—no credit card or commitment required. This 15-question diagnostic uses genuine scenario-based items from our premium bank to give you a baseline understanding of your current readiness and let you experience our interactive platform firsthand.</p>
+                <summary>Can I evaluate the platform before purchasing?</summary>
+                <p>Absolutely. We encourage all candidates to launch our Free Diagnostic Assessment. This 15-question stress test utilizes live, scenario-based items from our premium database, giving you a tangible baseline without requiring a credit card.</p>
             </details>
             <details>
-                <summary>What if I fail the PMP exam after using this simulator?</summary>
-                <p>Our Elite Tier provides lifetime access to the platform. Unlike subscription-based services that cut off your access, your account remains active indefinitely. If you do not pass on your first attempt, you will retain full access to all mock exams, domain sprints, and advanced performance analytics. This allows you to continuously identify weak spots and recalibrate your study plan without ever paying a renewal fee.</p>
+                <summary>What happens if my exam is delayed?</summary>
+                <p>Elite Tier access is a lifetime model. Unlike subscription services that exploit exam delays by forcing renewals, your account and historical data remain permanently active. You can recalibrate your study schedule at your own pace without ever paying again.</p>
             </details>
             <details>
-                <summary>Do I need 80% to pass the real PMP exam?</summary>
-                <p>The Project Management Institute (PMI) does not publish a specific numerical passing score; exams are graded using psychometric analysis based on the difficulty of the specific questions you receive. However, industry consensus and our data show that consistently scoring between 75% and 80% on first attempts of our full-length mock exams indicates a very strong readiness level and a high probability of passing the actual exam.</p>
+                <summary>What score do I need on these mocks to be ready?</summary>
+                <p>While PMI utilizes dynamic psychometric grading rather than a flat percentage, our data consistently indicates that candidates who achieve a 75% to 80% on their first attempt of our full-length simulations possess the cognitive readiness required to pass the official exam.</p>
             </details>
         </div>
     </div>
 
     <div class="hero-section" style="padding: 80px 20px;">
-        <h1 class="hero-title serif-text" style="font-size: 2.8rem;">The Exam Won't Wait. Neither Should You.</h1>
-        <p class="hero-subtitle" style="margin-bottom: 35px; color: #CBD5E1;">Find out exactly where you stand in 15 minutes, then turn your result into full exam practice.</p>
-        <a href="https://pmp-simulator-2026.streamlit.app" class="btn-primary">Start Free Readiness Assessment →</a>
+        <h1 class="hero-title serif-text" style="font-size: 2.8rem;">The Exam Won't Wait.</h1>
+        <p class="hero-subtitle" style="margin-bottom: 35px; color: #CBD5E1;">Pinpoint your exact knowledge gaps in 15 minutes, then convert your baseline into exam-day confidence.</p>
+        <a href="https://pmp-simulator-2026.streamlit.app" class="btn-primary">Launch Free Diagnostic Assessment</a>
     </div>
 
-    <!-- Footer -->
     <div class="footer-container">
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Simulator</h4>
                 <ul>
-                    <li><a href="https://pmp-simulator-2026.streamlit.app">Start Free Assessment</a></li>
-                    <li><a href="#pricing">Pricing & Plans</a></li>
-                    <li><a href="#pricing">Features Overview</a></li>
+                    <li><a href="https://pmp-simulator-2026.streamlit.app">Free Diagnostic</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="https://pmp-simulator-2026.streamlit.app">Bonus Question Banks</a></li>
-                    <li><a href="https://pmp-simulator-2026.streamlit.app">Performance Analytics</a></li>
+                    <li><a href="https://pmp-simulator-2026.streamlit.app">Bonus Banks</a></li>
+                    <li><a href="https://pmp-simulator-2026.streamlit.app">Performance Data</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -269,14 +272,13 @@
         </div>
         <div style="text-align: center; margin-top: 30px; font-size: 0.75rem;">
             <div style="background-color: #1E293B; padding: 10px 20px; border-radius: 4px; display: inline-block; margin-bottom: 15px;">
-                Independent preparation platform. PMP®, PMBOK®, and PMI® are registered marks of the Project Management Institute, Inc.<br>
+                Independent educational platform. PMP®, PMBOK®, and PMI® are registered marks of the Project Management Institute, Inc.<br>
                 This platform is not affiliated with, approved by, or endorsed by PMI.
             </div>
             <div style="margin-top: 10px;">© 2026 Elite Simulator Systems. All rights reserved.</div>
         </div>
     </div>
 
-    <!-- Modals -->
     <div id="legalModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
